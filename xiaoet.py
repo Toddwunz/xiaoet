@@ -93,7 +93,7 @@ class XET(object):
         # save m3u8 file
         m3u8_file = os.path.join(media_dir, '{title}.m3u8'.format(title=title))
         if not os.path.exists(m3u8_file):
-            with open(m3u8_file, 'wb', encoding='utf8') as f:
+            with open(m3u8_file, 'w', encoding='utf8') as f:
                 f.write(media.dumps())
 
     def audio(self, url, media_dir, title):
